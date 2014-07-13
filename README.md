@@ -8,20 +8,18 @@ I needed an image with **glibc** and **libssl** to be able to run [Mosquitto MQT
 
 # Version
 
-busybox   v1.22.1
-buildroot v2014.05
-glibc     v2.18
-openssl   v1.0.1g
+- **busybox**   v1.22.1
+- **buildroot** v2014.05
+- **glibc**     v2.18
+- **openssl**   v1.0.1g
 
 # Build from repository
 
 (https://github.com/jllopis/docker-busybox)
 
-````bash
-$ git clone git@github.com:jllopis/docker-busybox.git
-$ cd docker-busybox
-$ sudo make
-````
+    $ git clone git@github.com:jllopis/docker-busybox.git
+    $ cd docker-busybox
+    $ sudo make
 
 The repository contains a **Makefile** that can build the image from scratch.
 
@@ -41,9 +39,7 @@ run make with sudo; otherwise it will error when trying to call **docker**.
 
 The image use _"/bin/sh"_ as **CMD** so you can start it as
 
-````bash
-$ sudo docker run -ti jllopis/busybox
-````
+    $ sudo docker run -ti jllopis/busybox
 
 Anyway, this container goal is to run servers that need **glibc** and **openssl** so its intended
 to be used as the **FROM** image for other images.
